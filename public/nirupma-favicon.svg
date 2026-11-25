@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 950 950" width="950" height="950" role="img" aria-label="N monogram favicon">
+  <defs>
+    <!-- Deep navy tile with the same purple-to-blue lighting as the reference -->
+    <linearGradient id="tile" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#29104d"/>
+      <stop offset="0.46" stop-color="#100b29"/>
+      <stop offset="1" stop-color="#08143a"/>
+    </linearGradient>
+    <radialGradient id="purpleBloom" cx="0.08" cy="0.02" r="0.88">
+      <stop offset="0" stop-color="#7524cf" stop-opacity=".58"/>
+      <stop offset=".48" stop-color="#421078" stop-opacity=".20"/>
+      <stop offset="1" stop-color="#180d35" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="blueBloom" cx="1" cy="1" r=".72">
+      <stop offset="0" stop-color="#102b72" stop-opacity=".5"/>
+      <stop offset="1" stop-color="#09102d" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="letter" x1=".12" y1="0" x2=".86" y2="1">
+      <stop offset="0" stop-color="#fffaff"/>
+      <stop offset=".48" stop-color="#f0e2ff"/>
+      <stop offset="1" stop-color="#c79bff"/>
+    </linearGradient>
+    <linearGradient id="ribbon" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0" stop-color="#e8d2ff"/>
+      <stop offset=".25" stop-color="#c99aff"/>
+      <stop offset=".62" stop-color="#a13bff"/>
+      <stop offset="1" stop-color="#7419e2"/>
+    </linearGradient>
+    <linearGradient id="ribbonHighlight" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#fff0ff" stop-opacity=".8"/>
+      <stop offset=".48" stop-color="#e7aaff" stop-opacity=".55"/>
+      <stop offset="1" stop-color="#b54cff" stop-opacity=".08"/>
+    </linearGradient>
+    <linearGradient id="orbit" x1=".1" y1=".1" x2=".9" y2=".9">
+      <stop offset="0" stop-color="#d5a1ff"/>
+      <stop offset=".52" stop-color="#8b35f0"/>
+      <stop offset="1" stop-color="#5215b5" stop-opacity=".04"/>
+    </linearGradient>
+    <filter id="softGlow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="13" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="ribbonGlow" x="-30%" y="-50%" width="160%" height="200%">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="tileClip">
+      <rect x="7" y="7" width="936" height="936" rx="190"/>
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#tileClip)">
+    <rect width="950" height="950" fill="url(#tile)"/>
+    <rect width="950" height="950" fill="url(#purpleBloom)"/>
+    <rect width="950" height="950" fill="url(#blueBloom)"/>
+
+    <!-- Orbital arcs sit behind the letter and ribbon -->
+    <path d="M 525 196 C 648 177, 767 241, 792 334 C 814 415, 794 485, 754 551"
+          fill="none" stroke="#8f2bfa" stroke-width="18" opacity=".48" filter="url(#softGlow)"/>
+    <path d="M 525 196 C 648 177, 767 241, 792 334 C 814 415, 794 485, 754 551"
+          fill="none" stroke="#b45bff" stroke-width="3.8" stroke-linecap="round" opacity=".92"/>
+    <path d="M 385 455 C 292 525, 158 594, 157 652 C 155 725, 232 769, 331 776 C 400 780, 462 764, 517 739"
+          fill="none" stroke="#922cf5" stroke-width="18" opacity=".48" filter="url(#softGlow)"/>
+    <path d="M 385 455 C 292 525, 158 594, 157 652 C 155 725, 232 769, 331 776 C 400 780, 462 764, 517 739"
+          fill="none" stroke="#c078ff" stroke-width="3.8" stroke-linecap="round" opacity=".9"/>
+
+    <!-- Soft light where the A's crossbar sits behind the sweeping ribbon -->
+    <path d="M 428 615 L 589 615" stroke="#a347ff" stroke-width="3" opacity=".42" filter="url(#softGlow)"/>
+
+    <!-- Custom geometric N silhouette, drawn to match the original monogram's scale -->
+    <path fill="url(#letter)" d="
+      M 218 219
+      L 340 219
+      L 609 560
+      L 609 219
+      L 731 219
+      L 731 694
+      L 611 694
+      L 340 356
+      L 340 694
+      L 218 694
+      Z"/>
+
+    <!-- Broad curved orbital ribbon crossing the A, matching the original mark -->
+    <path d="M 215 694
+             C 305 574, 432 493, 571 465
+             C 640 451, 704 454, 750 462
+             C 677 468, 600 490, 527 520
+             C 445 555, 370 617, 313 694
+             Z"
+          fill="#8d27f1" opacity=".55" filter="url(#ribbonGlow)"/>
+    <path d="M 215 694
+             C 305 574, 432 493, 571 465
+             C 640 451, 704 454, 750 462
+             C 677 468, 600 490, 527 520
+             C 445 555, 370 617, 313 694
+             Z"
+          fill="url(#ribbon)"/>
+    <path d="M 220 688
+             C 326 559, 468 486, 603 463
+             C 656 455, 707 457, 747 462"
+          fill="none" stroke="url(#ribbonHighlight)" stroke-width="3.2" stroke-linecap="round" opacity=".78"/>
+  </g>
+
+  <!-- Very subtle tile edge, like the reference PNG -->
+  <rect x="7" y="7" width="936" height="936" rx="190" fill="none" stroke="#44306d" stroke-opacity=".5" stroke-width="2"/>
+</svg>
